@@ -13,7 +13,35 @@
 </head>
 
 <body>
-  {{{body}}}
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: tomato;">
+    <a class="navbar-brand" href="/">Supermarket</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/pizzas">Pizzas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/beers">Beers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/carnes">Carne</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/frutas">Frutas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/tomatoes">Tomatoes</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+  <div class="container">
+    {{{body}}}
+  </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

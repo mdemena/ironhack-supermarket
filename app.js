@@ -7,10 +7,12 @@ const frutasRouter = require("frutasRouter")
 const carnesRouter = require("./routes/carnesRouter")
 const beersRouter = require('./routes/beersRouter');
 const tomatoes = require('./routes/tomatoesRouter');
+const pizzaRouter = require("./routes/pizzaRouter");
 
 const app = express();
 
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use("/pizzas", pizzaRouter);
 app.use("/frutas", frutasRouter)
 app.use("/carnes",carnesRouter)
 app.use("/tomatoes", tomatoes);
