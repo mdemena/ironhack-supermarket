@@ -1,6 +1,8 @@
 <h1>Tomatoes</h1>
 <br>
 <br>
-{{#each data}}
-    {{> list this}}
+{{#each .}}
+    <ul>
+        <li>{{> list this}}</li>
+    </ul>
 {{/each}}
