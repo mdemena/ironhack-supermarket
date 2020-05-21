@@ -45,10 +45,10 @@ router.get("/", (req, res, next) => {
       })
 })
 
-router.get('/:id', (req,res,next) => {
-    if(req.params && req.params.id) {
-        res.render('carne', carnes.filter(el => el.id === req.params.id())
-    }
-})
+router.get('/:id', (req, res, next) => {
+	if (req.params && req.params.id) {
+		res.render('carne', {carne: data.filter((el) => el.id === req.params.id) });
+	}
+});
 
 module.exports = router;
