@@ -3,12 +3,14 @@ const hbs = require('hbs');
 const path = require('path');
 const chalk = require('chalk');
 const bodyparser = require('body-parser');
+const tomatoes = require('./routes/tomatoesRouter');
 
 const app = express();
 
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use("/tomatoes", tomatoes);
 
-app.set('view engne', 'hbs');
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
