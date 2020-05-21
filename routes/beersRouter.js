@@ -1,6 +1,6 @@
 const express = require('express');
 
-const data = [
+const beers = [
 	{
 		id: 'estrella',
 		name: 'Estrella Damm',
@@ -43,12 +43,14 @@ const data = [
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-	res.render('beers', data);
+	res.render('beers', { beers });
 });
 
 router.get('/:id', (req, res, next) => {
 	if (req.params && req.params.id) {
-		res.render('beer', { beer: data.filter((el) => el.id === req.params.id) });
+		res.render('beer', {
+			beer: beers.filter((el) => el.id === req.params.id)[0],
+		});
 	}
 });
 

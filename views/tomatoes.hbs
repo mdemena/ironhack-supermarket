@@ -1,8 +1,8 @@
 <h1>Tomatoes</h1>
 <br>
 <br>
-{{#each .}}
+{{#each data}}
     <ul>
-        <li>{{> list this}}</li>
+        <li>{{> list this path='/tomatoes'}}</li>
     </ul>
 {{/each}}

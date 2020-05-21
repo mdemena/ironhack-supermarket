@@ -47,7 +47,7 @@ router.get('/', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
 	if (req.params && req.params.id) {
 		res.render('carne', {
-			carne: carnes.filter((el) => el.id === req.params.id),
+			carne: carnes.filter((el) => el.id === parseInt(req.params.id))[0],
 		});
 	}
 });
