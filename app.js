@@ -4,9 +4,12 @@ const path = require('path');
 const chalk = require('chalk');
 const bodyparser = require('body-parser');
 const beersRouter = require('./routes/beersRouter');
+const tomatoes = require('./routes/tomatoesRouter');
+
 const app = express();
 
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use("/tomatoes", tomatoes);
 app.use('/beers', beersRouter);
 
 app.set('view engine', 'hbs');
