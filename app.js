@@ -4,11 +4,14 @@ const path = require('path');
 const chalk = require('chalk');
 const bodyparser = require('body-parser');
 
+const pizzaRouter = require("./routes/pizzaRouter");
+
 const app = express();
 
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use("/pizzas", pizzaRouter);
 
-app.set('view engne', 'hbs');
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
