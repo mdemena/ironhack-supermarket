@@ -48,7 +48,6 @@ router.get('/:id', (req, res, next) => {
 	const filteredArr = pizzas.filter(
 		(elem) => elem.id === parseInt(req.params.id)
 	);
-	console.log(filteredArr);
 	res.render('pizza', { pizza: filteredArr[0] });
 });
 
