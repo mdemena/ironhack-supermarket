@@ -3,6 +3,7 @@ const hbs = require('hbs');
 const path = require('path');
 const chalk = require('chalk');
 const bodyparser = require('body-parser');
+const frutasRouter = require("frutasRouter")
 const carnesRouter = require("./routes/carnesRouter")
 const beersRouter = require('./routes/beersRouter');
 const tomatoes = require('./routes/tomatoesRouter');
@@ -10,6 +11,7 @@ const tomatoes = require('./routes/tomatoesRouter');
 const app = express();
 
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use("/frutas", frutasRouter)
 app.use("/carnes",carnesRouter)
 app.use("/tomatoes", tomatoes);
 app.use('/beers', beersRouter);
