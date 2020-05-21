@@ -3,10 +3,13 @@ const hbs = require('hbs');
 const path = require('path');
 const chalk = require('chalk');
 const bodyparser = require('body-parser');
-
+const frutasRouter = require("frutasRouter")
 const app = express();
 
-app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.urlencoded({
+	extended: true
+}));
+app.use("/frutas", frutasRouter)
 
 app.set('view engne', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
